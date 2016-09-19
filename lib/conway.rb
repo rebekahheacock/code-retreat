@@ -1,5 +1,6 @@
 # Sandi's rules
 
+
 class Board
   def initialize(n, val, initial_state)
     @board = []
@@ -25,7 +26,23 @@ class Cell
     @coordinates = [row, column]
   end
 
+  def living_neighbors
+  end
+
   def update_status
     self.status = !status
+  end
+
+  def overpopulated?
+     living_neighbors > 3
+  end
+
+  def lonely?
+  end
+
+  def static?
+  end
+
+  def reproduce?
   end
 end
