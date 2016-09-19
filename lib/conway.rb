@@ -1,3 +1,5 @@
+# Rebekah & Will silent coding
+
 module Logic
 
   #def under_populated(count_living return)
@@ -17,7 +19,7 @@ end
 
 class Cell
   def initialize()
-      # coordinates: [x, y]
+      # coordinates: [x, y] 
       # status
       # new status
   end
