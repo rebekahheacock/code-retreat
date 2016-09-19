@@ -1,7 +1,25 @@
+module Logic
+
+  #def under_populated(count_living return)
+   #if living <2 
+     #new status = nil/dead
+  end
+end
+
+  # over_populated("")
+  # if living neighbors > 3 
+    # new stauus = nil/dead
+  end
+end
+
+ # birth(i)
+
+
 class Cell
   def initialize()
       # coordinates: [x, y]
       # status
+      # new status
   end
 
   def find_neighbors
@@ -27,7 +45,7 @@ class Cell
 
   # I think you can put 2 values into cell.  Status & new status, only having read the status when determining
   # new status.  And on new iteration setting status to "new status" at beginning of turn.  Names sound bad now
-  
+
 
 
 end
