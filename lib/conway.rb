@@ -2,31 +2,50 @@
 
 
 class Board
-  def initialize(n, val, initial_state)
+  attr_reader :size
+  def initialize(size, initial_state)
     @board = []
+    @size = size
     fill_board
-    # initial_state.each(|coordinates| )
+    # initial_state.each{ |coordinates| do stuff }
     end
 
     def fill_board
-    n.times do |row_index|
+    size.times do |row_index|
       row = []
-      n.times {|column_index| row << Cell.new(row_index, column_index)}
+      size.times {|column_index| row << Cell.new(row_index, column_index, self)}
       @board << row
     end
+
+
   end
 end
+
+# how to determine number of neighbors a cell has:
+# -pass the board size to the cell constructor
+# -add a "dead ring" around the board
+# -
+
 
 class Cell
   attr_accessor :status
   private :status
 
-  def initialize(row, column)
+  def initialize(row, column, board)
     @status = false
     @coordinates = [row, column]
+    @neighbors = []
+    initialize_neighbors
+    @board = board
+  end
+
+  # how do we tell whether it's a corner, edge, or field cell?
+  def initialize_neighbors
+
   end
 
   def living_neighbors
+    # return number of living neighbors cell has
   end
 
   def update_status
@@ -34,7 +53,7 @@ class Cell
   end
 
   def overpopulated?
-     living_neighbors > 3
+    living_neighbors > 3
   end
 
   def lonely?
