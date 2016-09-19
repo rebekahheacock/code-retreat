@@ -17,12 +17,15 @@ class Board
 end
 
 class Cell
+  attr_accessor :status
+  private :status
+
   def initialize(row, column)
     @status = false
     @coordinates = [row, column]
   end
 
-  def 
-
+  def update_status
+    self.status = !status
   end
 end
