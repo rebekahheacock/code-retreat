@@ -12,6 +12,8 @@ class Cell
 
   def find_neighbors
 
+    
+
   end
 end
 
@@ -29,11 +31,11 @@ class Board
 
   def build_cells
     height.times do |r|
-      r = []
+      row = []
       width.times do |c|
-        r << Cell.new(r, c)
+        row << Cell.new(r, c)
       end
-      cells << r
+      cells << row
     end
   end
 end
