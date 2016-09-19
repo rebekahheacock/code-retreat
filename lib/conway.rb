@@ -1,12 +1,17 @@
 # working with Tucker on Navigator-Driver
 
 class Cell
-  attr_reader :coordinates
+  attr_reader :coordinates, :neighbors
   attr_accessor :status
 
   def initialize(row, column)
     @coordinates = [row, column]
     @status = false
+    @neighbors = []
+  end
+
+  def find_neighbors
+
   end
 end
 
