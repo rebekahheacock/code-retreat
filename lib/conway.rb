@@ -1,4 +1,5 @@
 # Sandi's rules
+# Julie, Will, Alex K., Rebekah
 class Board
   attr_reader :size
   def initialize(size, initial_state)
