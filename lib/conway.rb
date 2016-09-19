@@ -1,6 +1,4 @@
 # Sandi's rules
-
-
 class Board
   attr_reader :size
   def initialize(size, initial_state)
@@ -41,7 +39,20 @@ class Cell
 
   # how do we tell whether it's a corner, edge, or field cell?
   def initialize_neighbors
+    # check down the left column
+        # get the left corners
+        # get the left edges
+    # check down the right column
+        # get the right corner
+        # get the right edges
+    # check across the top
+    # check across the bottom
+    # check the field
 
+
+
+    # if row = 0 or board.size - 1, and if col = 0 or board.size - 1
+    # if row = 0 or board.size - 1, or if col = 0 or board.size - 1
   end
 
   def living_neighbors
