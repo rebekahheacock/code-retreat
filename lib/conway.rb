@@ -12,14 +12,17 @@ end
 
 class Board
   attr_reader :cells
+  attr_reader :height, :width
   def initialize(height, width)
     @height = height
     @width = width
 
     @cells = []
+
+    build_cells
   end
 
-  def build_cells(height, width)
+  def build_cells
     height.times do |r|
       r = []
       width.times do |c|
