@@ -4,8 +4,8 @@ class Cell
   attr_reader :coordinates
   attr_accessor :status
 
-  def initialize
-    @coordinates = []
+  def initialize(row, column)
+    @coordinates = [row, column]
     @status = false
   end
 end
@@ -26,7 +26,7 @@ class Board
     height.times do |r|
       r = []
       width.times do |c|
-        r << Cell.new
+        r << Cell.new(r, c)
       end
       cells << r
     end
